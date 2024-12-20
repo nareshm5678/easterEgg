@@ -1,0 +1,124 @@
+/* General app styling */
+.App {
+  text-align: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('./assets/yvns_xtdx_210511.jpg'); /* Use your background image */
+  background-size: cover;
+  background-position: center;
+  z-index: 0; /* Ensure the background is on the lowest layer */
+}
+
+/* Timer and Scoreboard styling */
+#timer, #scoreboard {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 10; /* Ensure these elements are above the background */
+}
+
+#timer {
+  top: 10px;
+  left: 10px;
+}
+
+#scoreboard {
+  top: 10px;
+  right: 10px;
+}
+
+/* Styling for the dialogue container */
+#dialogue-container {
+  position: absolute;
+  bottom: 75%; /* Adjust position from the bottom */
+  left: 20%; /* Center horizontally */
+  transform: translate(-50%, 0); /* Center the box */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+  color: white;
+  padding: 10px;
+  border-radius: 12px; /* Rounded corners for a modern look */
+  width: 100px; /* Fixed square size */
+  height: 100px; /* Match height to width for square */
+  text-align: center;
+  font-size: 14px; /* Smaller font for a compact box */
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  display: flex; /* Center text inside the box */
+  align-items: center; /* Vertically align text */
+  justify-content: center; /* Horizontally align text */
+  z-index: 15; /* Ensure the dialogue box stays on top */
+}
+
+
+/* Owl styling */
+#owl {
+  position: absolute;
+  top: 10%; /* Adjust vertical position */
+  left: 10%; /* Adjust horizontal position */
+  cursor: pointer;
+  z-index: 10;
+  width: 8%;
+}
+
+/* Hiding objects styling (Tree, Bush, Rock) */
+.hiding-object {
+  position: absolute;
+  width: 15%; /* Increase the size of the hiding object */
+  height: auto;
+  cursor: pointer;
+  z-index: 5; /* Ensure hiding objects are above the background */
+}
+
+/* Hidden Easter eggs styling */
+.object {
+  position: absolute;
+  width: 0.5%; /* Smaller width for the egg (even smaller) */
+  height: auto;
+  z-index: 2; /* Ensure the egg is below other elements */
+  opacity: 0.8; /* Slight transparency to blend behind the background */
+}
+
+/* Position adjustments for hiding objects and eggs */
+.hiding-object:nth-child(1),
+.object:nth-child(1) {
+  top: 37%; /* Position for the first object/egg */
+  left: 81%;
+}
+
+.hiding-object:nth-child(2),
+.object:nth-child(2) {
+  top: 51%; /* Position for the second object/egg */
+  left: 65%;
+}
+
+.hiding-object:nth-child(3),
+.object:nth-child(3) {
+  top: 70%; /* Position for the third object/egg */
+  left: 20%;
+}
+
+
+/* Styling for the start button */
+#start-btn {
+  position: absolute;
+  top: 75%; /* Move the button lower on the screen */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  font-size: 24px;
+  padding: 20px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
+  z-index: 20; /* Ensure start button is on top */
+}
+
+#start-btn:hover {
+  background-color: #45a049;
+}
