@@ -28,6 +28,16 @@ function App() {
     "Identify the Easter egg locations! Click the owl for hints (1 hint = deduct 30 points)"
   );
 
+  // Add facts for new container
+  const factLines = [
+    "The Bureau of Indian Standards, or BIS, is the national standards body of India.",
+    "It ensures quality, safety, and reliability in products and services.",
+    "Formed under the BIS Act, it operates under the Ministry of Consumer Affairs, Food, and Public Distribution.",
+    "BIS develops, implements, and certifies standards to maintain uniformity and quality.",
+  ];
+
+  const [factText, setFactText] = useState("Click on hiding objects to find Easter eggs!");
+
   // Timer logic
   useEffect(() => {
     if (gameStarted && timeLeft > 0) {
@@ -116,6 +126,15 @@ function App() {
     alert(`Game Over! Final Score: ${score}`);
   };
 
+  // Function to show facts
+  useEffect(() => {
+    const factInterval = setInterval(() => {
+      const randomFact = factLines[Math.floor(Math.random() * factLines.length)];
+      setFactText(randomFact);
+    }, 10000); // Change fact every 10 seconds
+    return () => clearInterval(factInterval);
+  }, []);
+
   return (
     <div
       className="App"
@@ -157,6 +176,20 @@ function App() {
       {/* Dialogue Box */}
       <div id="dialogue-container">
         <div id="dialogue-text">{dialogueText}</div>
+      </div>
+
+      {/* Facts Box */}
+      <div id="fact-container" style={{
+        position: "absolute",
+        bottom: "80%",
+        left: "50%",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        padding: "10px",
+        color: "white",
+        borderRadius: "5px",
+        width: "300px",
+      }}>
+        <div id="fact-text">{factText}</div>
       </div>
 
       {/* Hiding objects and Easter eggs */}
