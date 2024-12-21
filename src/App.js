@@ -5,10 +5,10 @@ import Confetti from 'react-confetti';
 
 // Import all the images
 import owlImage from "./assets/owl.png";
-import egg1Image from "./assets/WhatsApp_Image_2024-12-01_at_6.33.19_PM-removebg-preview.png";
-import egg2Image from "./assets/WhatsApp_Image_2024-12-01_at_6.33.49_PM-removebg-preview.png";
-import egg3Image from "./assets/WhatsApp_Image_2024-12-01_at_6.35.26_PM-removebg-preview.png";
-import backgroundImage from "./assets/yvns_xtdx_210511.jpg"; // Background image
+import egg1Image from "./assets/egg1.png";
+import egg2Image from "./assets/egg2.png";
+import egg3Image from "./assets/egg3.png";
+import backgroundImage from "./assets/bgimage.jpg"; // Background image
 import bushImage from "./assets/bush.png"; // Hiding object (Bush)
 import brokenEggImage from "./assets/broken-egg.png"; // Broken egg image
 import monkeyImage from "./assets/bird.png"; // Hiding object (Monkey)

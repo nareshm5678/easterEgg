@@ -4,7 +4,7 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background-image: url('./assets/yvns_xtdx_210511.jpg'); /* Use your background image */
+  background-image: url('./assets/bgimage.jpg'); /* Use your background image */
   background-size: cover;
   background-position: center;
   z-index: 0; /* Ensure the background is on the lowest layer */
